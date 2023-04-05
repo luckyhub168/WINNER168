@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
+  <title>ลิงค์แชร์กิจกรรม</title>
+</head>
+<body>
+    <script src="https://static.line-scdn.net/liff/edge/versions/2.5.0/sdk.js"></script>
+    <script>
+        async function main() {
+                                         // Liff ID
+            await liff.init({ liffId: "1660832449-gXYmZNNO" })
+            await liff.shareTargetPicker([
+                {
+                    type: "flex",
+                    // ข้อความก่อนกดอ่าน
+                    altText: "เครดิตฟรี 50.-",
+                    contents: 
+                    // โค้ดจาก line bot designer
+                    {
+  "type": "bubble",
+  "hero": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "image",
+            "url": "https://cdn.discordapp.com/attachments/1029724510523494470/1093100258772394014/02_50-01.jpg",
+            "size": "full",
+            "aspectRatio": "1:1"
+          }
+        ],
+        "borderWidth": "bold",
+        "cornerRadius": "lg"
+      },
+      {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "แจกเครดิตฟรี 50.-",
+            "color": "#00ff33",
+            "align": "center",
+            "style": "normal"
+          },
+          {
+            "type": "text",
+            "text": "★★★รับได้ทุกวัน★★★",
+            "color": "#00ff33",
+            "align": "center"
+          }
+        ]
+      },
+      {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "button",
+            "action": {
+              "type": "uri",
+              "label": "รับเครดิตฟรี",
+              "uri": "https://lin.ee/a7vQnWU"
+            },
+            "color": "#000000"
+          }
+        ],
+        "backgroundColor": "#ffcc00",
+        "cornerRadius": "lg",
+        "margin": "sm",
+        "spacing": "xs"
+      }
+    ],
+    "backgroundColor": "#000000",
+    "paddingAll": "sm"
+  }
+}
+                }
+            ])
+            liff.closeWindow()
+        }
+        main()
+    </script>
+</body>
+</html>
